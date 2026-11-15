@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block body %}
+<h2 class="my-4 ms-3">{{category['category_name']}}</h2>
+<section class="category_content">
+    <div>
+    {% for post in posts %}
+    <div class="card my-4">
+      <div class="card-body">
+        <h5 class="card-title">
+          {{ post['text']|truncate(100, True, '...') }}
+        </h5>
+
+        <a href="/post/view/{{ post['post_id'] }}" class="btn btn-sm btn-outline-primary mt-2">
+        ЧИтати далі →
+    </a>
+      </div>
+      <footer class="card-footer">{{post['datetime']}}</footer>
+    </div>
+    {% endfor %}
+    </div>
+    <form method="post" class="mb-5">
+        <div class="mb-3">
+            <label class="form-label" for="title">Заголовок</label>
+            <input class="form-control" id="title" name="title" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="text">Текст</label>
+            <textarea class="form-control" id="text" name="text" rows="6" required></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Створити пост</button>
+    </form>
+</section>
+{% endblock %}

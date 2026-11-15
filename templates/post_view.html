@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block body %}
+<a href="{{ url_for('show_category', category_name=post['category_name']) }}">← Назад до категорії</a>
+<article class="card mt-3">
+    <div class="card-body">
+        <h1>{{ post['title'] }}</h1>
+        <p class="text-muted">Категорія: {{ post['category_name'] }}</p>
+        <div>{{ post['text'] }}</div>
+    </div>
+    <div class="card-footer text-muted">{{ post['datetime'] }}</div>
+</article>
+{% endblock %}
