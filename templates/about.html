@@ -1,5 +1,89 @@
-{% extends "base.html"%}
+{% extends "base.html" %}
 
 {% block body %}
-<h2> щось про мене</h2>
+<div class="container py-5">
+    <div class="bg-light rounded p-4 mb-5">
+        <span class="badge bg-primary mb-2">Мій особистий блог</span>
+        <h1>Привіт! Давай знайомитися</h1>
+        <p class="lead">Тут трохи про мене, мої захоплення та перші проєкти.</p>
+        <a href="#projects" class="btn btn-primary">Переглянути проєкти</a>
+    </div>
+
+    <div class="row align-items-center mb-5">
+        <div class="col-md-4 mb-3">
+            <img src="https://placehold.co/600x450/e0e7ff/3730a3?text=My+photo"
+                 class="img-fluid rounded" alt="Заглушка для мого фото">
+        </div>
+        <div class="col-md-8">
+            <h2>Про себе</h2>
+            <p>Мене звати [ім’я]. Я вчуся створювати сайти та ділюся своїми ідеями в цьому блозі.</p>
+            <ul>
+                <li>Моє місто: [назва міста]</li>
+                <li>Моє навчання: [місце навчання]</li>
+                <li>Моя мета: створити власний цікавий проєкт</li>
+            </ul>
+            <span class="badge bg-primary">HTML</span>
+            <span class="badge bg-success">Python</span>
+            <span class="badge bg-secondary">Bootstrap</span>
+        </div>
+    </div>
+
+    <h2 class="mb-3">Хобі</h2>
+    <div class="row mb-5">
+        <div class="col-md-6 mb-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h3 class="h5 card-title">Що мені подобається</h3>
+                    <p class="card-text">У вільний час я люблю пробувати щось нове.</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Читати цікаві книги</li>
+                    <li class="list-group-item">Слухати музику</li>
+                    <li class="list-group-item">Подорожувати та фотографувати</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-6 mb-3">
+            <div class="card h-100 bg-light">
+                <div class="card-body">
+                    <h3 class="h5 card-title">Хочу спробувати</h3>
+                    <ol>
+                        <li>Прочитати нову книгу</li>
+                        <li>Відвідати нове місто</li>
+                        <li>Навчитися краще фотографувати</li>
+                    </ol>
+                    <p class="text-muted mb-0">Тут згодом з’являться мої власні плани.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2 id="projects" class="mb-3">Проєкти</h2>
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <div class="card h-100">
+                <img src="https://placehold.co/800x400/dbeafe/1e40af?text=My+blog"
+                     class="card-img-top" alt="Заглушка зображення блогу">
+                <div class="card-body">
+                    <span class="badge bg-success mb-2">У роботі</span>
+                    <h3 class="h5 card-title">Мій блог</h3>
+                    <p class="card-text">Сайт, де я публікую дописи та вчуся працювати з Flask.</p>
+                    <a href="/" class="btn btn-outline-primary">Відкрити блог</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-3">
+            <div class="card h-100">
+                <img src="https://placehold.co/800x400/fef3c7/92400e?text=New+project"
+                     class="card-img-top" alt="Заглушка зображення майбутнього проєкту">
+                <div class="card-body">
+                    <span class="badge bg-secondary mb-2">У планах</span>
+                    <h3 class="h5 card-title">Наступний проєкт</h3>
+                    <p class="card-text">Тут буде назва, короткий опис і посилання на мій новий проєкт.</p>
+                    <button type="button" class="btn btn-outline-secondary" disabled>Незабаром</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
