@@ -129,3 +129,10 @@ def get_post(post_id):
         """, (post_id,)).fetchone()
     close()
     return post
+
+
+def post_delete(post_id):
+    connect()
+    cursor.execute("DELETE FROM posts WHERE post_id = ?", (post_id,))
+    conn.commit()
+    close()

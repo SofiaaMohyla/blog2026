@@ -6,6 +6,10 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
+@app.route("/post/delete/<int:post_id>", methods=["POST", "GET"])
+def post_delete_func(post_id):
+    post_delete(post_id)
+    return redirect(url_for("index"))
 @app.route("/about")
 def about():
     return render_template("about.html")
